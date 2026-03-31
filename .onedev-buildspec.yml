@@ -4,7 +4,8 @@ jobs:
   steps:
   - !PushRepository
     name: Sync to Github
-    remoteUrl: https://github.com/IronTooch/DigitalContactCard.git
+    remoteUrl: https://github.com/IronTooch/DigitalContactCard-Mirror.git
+    passwordSecret: Github PAT
     force: true
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   retryCondition: never
