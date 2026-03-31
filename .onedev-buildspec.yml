@@ -1,0 +1,13 @@
+version: 38
+jobs:
+- name: Sync to Github
+  steps:
+  - !PushRepository
+    name: Sync to Github
+    remoteUrl: https://github.com/IronTooch/DigitalContactCard.git
+    force: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  timeout: 14400
